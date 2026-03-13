@@ -1,0 +1,36 @@
+s = input("Nhập chuỗi số: ")
+
+numbers = [int(x.strip()) for x in s.split(";")]
+
+even = 0
+negative = 0
+prime = 0
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+print("Các số:")
+
+for num in numbers:
+    print(num)
+
+    if num % 2 == 0:
+        even += 1
+
+    if num < 0:
+        negative += 1
+
+    if is_prime(num):
+        prime += 1
+
+avg = sum(numbers) / len(numbers)
+
+print("Số chẵn:", even)
+print("Số âm:", negative)
+print("Số nguyên tố:", prime)
+print("Trung bình:", avg)
