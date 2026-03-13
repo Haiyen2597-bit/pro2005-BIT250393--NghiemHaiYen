@@ -1,0 +1,25 @@
+import math
+
+a = float(input("Nhập số thứ nhất: "))
+b = float(input("Nhập số thứ hai: "))
+
+
+power = a ** b
+
+
+sqrt_a = math.sqrt(a)
+sqrt_b = math.sqrt(b)
+
+div_int = a // b
+remainder = a % b
+
+round_a = round(a)
+round_b = round(b)
+
+print("Lũy thừa a^b:", power)
+print("Căn bậc 2 của a:", sqrt_a)
+print("Căn bậc 2 của b:", sqrt_b)
+print("Chia lấy phần nguyên a // b:", div_int)
+print("Chia lấy phần dư a % b:", remainder)
+print("Làm tròn a:", round_a)
+print("Làm tròn b:", round_b)
