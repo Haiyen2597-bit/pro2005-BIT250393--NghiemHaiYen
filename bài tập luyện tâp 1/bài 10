@@ -1,0 +1,8 @@
+code = input("Nhập mã sản phẩm: ")
+name = input("Nhập tên sản phẩm: ")
+price = float(input("Nhập giá: "))
+
+with open("products.txt", "a", encoding="utf-8") as f:
+    f.write(code + ";" + name + ";" + str(price) + "\n")
+
+print("Đã lưu sản phẩm vào file")
