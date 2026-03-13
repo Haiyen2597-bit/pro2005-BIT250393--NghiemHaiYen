@@ -1,0 +1,36 @@
+import random
+
+m = int(input("Nhập số hàng: "))
+n = int(input("Nhập số cột: "))
+
+matrix = []
+
+
+for i in range(m):
+    row = []
+    for j in range(n):
+        row.append(random.randint(1, 100))
+    matrix.append(row)
+
+print("Ma trận:")
+for r in matrix:
+    print(r)
+
+
+h = int(input("Nhập hàng cần hiển thị: "))
+print("Hàng", h, ":", matrix[h-1])
+
+c = int(input("Nhập cột cần hiển thị: "))
+print("Cột", c, ":")
+for r in matrix:
+    print(r[c-1])
+
+
+max_value = matrix[0][0]
+
+for r in matrix:
+    for v in r:
+        if v > max_value:
+            max_value = v
+
+print("Giá trị lớn nhất:", max_value)
