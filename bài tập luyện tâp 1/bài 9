@@ -1,0 +1,14 @@
+class Student:
+    def __init__(self, name, score):
+        if 0 <= score <= 10:
+            self.name = name
+            self.score = score
+        else:
+            print("Điểm không hợp lệ")
+
+    def display(self):
+        print("Sinh viên", self.name, "có điểm là", self.score)
+
+
+s1 = Student("A", 10)
+s1.display()
