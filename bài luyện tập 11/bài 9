@@ -1,0 +1,47 @@
+
+def nhap_ma_tran(rows, cols, so_ma_tran):
+    ma_tran = []
+    print(f"Nhập ma trận {so_ma_tran}:")
+    for i in range(rows):
+        while True:
+            row_input = input(f"Nhập hàng {i+1} (cách nhau bằng dấu cách): ").strip()
+            if row_input == "":
+                print("Lỗi: Không được để trống. Nhập lại.")
+                continue
+            row_values = row_input.split()
+            if len(row_values) != cols:
+                print(f"Lỗi: Cần nhập đúng {cols} giá trị. Nhập lại.")
+                continue
+            try:
+                row = [float(val) for val in row_values]
+                ma_tran.append(row)
+                break
+            except ValueError:
+                print("Lỗi: Phải nhập số. Nhập lại.")
+    return ma_tran
+
+def cong_ma_tran(a, b):
+    rows = len(a)
+    cols = len(a[0])
+    ket_qua = []
+    for i in range(rows):
+        hang = []
+        for j in range(cols):
+            hang.append(a[i][j] + b[i][j])
+        ket_qua.append(hang)
+    return ket_qua
+
+
+rows = int(input("Nhập số hàng: "))
+cols = int(input("Nhập số cột: "))
+
+
+ma_tran1 = nhap_ma_tran(rows, cols, 1)
+ma_tran2 = nhap_ma_tran(rows, cols, 2)
+
+
+ket_qua = cong_ma_tran(ma_tran1, ma_tran2)
+
+print("Kết quả cộng hai ma trận:")
+for row in ket_qua:
+    print(row)
