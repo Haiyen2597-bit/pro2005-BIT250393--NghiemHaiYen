@@ -1,0 +1,53 @@
+
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        print(f"Đang xét vị trí {mid}: {arr[mid]}")
+
+
+        if len(arr[mid]) == len(target):
+            if arr[mid] == target:
+                return mid
+            elif arr[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        elif len(arr[mid]) < len(target):
+            right = mid - 1   
+        else:
+            left = mid + 1
+
+    return -1
+
+
+
+arr = []
+for i in range(5):
+    s = input(f"Nhập chuỗi thứ {i+1}: ")
+    arr.append(s)
+
+
+for i in range(1, len(arr)):
+    key = arr[i]
+    j = i - 1
+    while j >= 0 and len(arr[j]) < len(key):
+        arr[j + 1] = arr[j]
+        j -= 1
+    arr[j + 1] = key
+
+print("\nDanh sách sau khi sắp xếp:", arr)
+
+
+target = input("\nNhập chuỗi cần tìm: ")
+
+pos = binary_search(arr, target)
+
+if pos != -1:
+    print(f"Tìm thấy '{target}' tại vị trí: {pos}")
+else:
+    print("Không tìm thấy!")
