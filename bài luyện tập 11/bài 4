@@ -1,0 +1,33 @@
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+numbers = list(map(int, input("Nhập danh sách số nguyên (cách nhau bởi dấu cách): ").split()))
+
+
+x = int(input("Nhập phần tử cần thêm: "))
+numbers.append(x)
+
+
+k = int(input("Nhập giá trị k cần kiểm tra: "))
+count_k = numbers.count(k)
+
+
+sum_prime = sum(num for num in numbers if is_prime(num))
+
+
+numbers.sort()
+
+
+print("Danh sách sau khi thêm:", numbers)
+print(f"Số lần xuất hiện của {k}:", count_k)
+print("Tổng các số nguyên tố:", sum_prime)
+
+
+numbers.clear()
+print("Danh sách sau khi xóa:", numbers)
