@@ -1,0 +1,19 @@
+sinh_vien = ("Nguyen Van A", 20, 8.5)
+
+# Unpack tuple
+ten, tuoi, diem_tb = sinh_vien
+
+
+print("Tên:", ten)
+print("Tuổi:", tuoi)
+print("Điểm trung bình:", diem_tb)
+
+img = Image.new("RGB", (400, 200), color="white")
+draw = ImageDraw.Draw(img)
+
+draw.text((10, 10), noi_dung, fill="black")
+
+
+img.save("nhanvien.png")
+
+print("Đã lưu file TXT, CSV và ảnh thành công!")
