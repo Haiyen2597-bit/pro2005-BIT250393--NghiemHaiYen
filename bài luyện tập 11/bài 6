@@ -1,0 +1,15 @@
+people = {}
+
+n = int(input("Nhập số người: "))
+
+for i in range(n):
+    name = input(f"Nhập tên người thứ {i+1}: ")
+    age = int(input(f"Nhập tuổi của {name}: "))
+    people[name] = age
+
+
+total_age = sum(people.values())
+average_age = total_age / len(people)
+
+print("Danh sách:", people)
+print("Tuổi trung bình:", average_age)
