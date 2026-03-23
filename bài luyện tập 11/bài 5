@@ -1,0 +1,9 @@
+
+my_dict = {"a": 1, "b": 2, "c": 3}
+
+key = "b"
+
+if key in my_dict:
+    print("Key tồn tại trong dictionary")
+else:
+    print("Key không tồn tại")
