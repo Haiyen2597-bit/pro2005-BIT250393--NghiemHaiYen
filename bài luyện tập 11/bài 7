@@ -1,0 +1,18 @@
+import csv
+from PIL import Image, ImageDraw, ImageFont
+
+
+ten = input("Nhập tên nhân viên: ")
+tuoi = input("Nhập tuổi: ")
+id_nv = input("Nhập ID: ")
+
+
+noi_dung = f"Tên: {ten}\nTuổi: {tuoi}\nID: {id_nv}"
+
+with open("nhanvien.txt", "w", encoding="utf-8") as f:
+    f.write(noi_dung)
+
+with open("nhanvien.csv", "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Tên", "Tuổi", "ID"])
+    writer.writerow([ten, tuoi, id_nv])
