@@ -1,0 +1,7 @@
+n = int(input("Nhập một số: "))
+
+if n < 0:
+    print("Lỗi: số nhập vào phải không âm")
+else:
+    du = n % 2
+    print("Phần dư khi chia cho 2 là:", du)
