@@ -1,0 +1,13 @@
+
+data = [
+    ("Book 1", 30000),
+    ("Book 2", 50000),
+    ("Book 3", 100000),
+    ("Tong", 900000)
+]
+
+with open("books.txt", "w", encoding="utf-8") as f:
+    for name, price in data:
+        f.write(f"{name};{price}\n")
+
+print("Đã lưu dữ liệu vào file books.txt")
