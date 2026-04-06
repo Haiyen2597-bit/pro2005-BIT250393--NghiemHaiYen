@@ -1,0 +1,11 @@
+def average_score(students):
+    total = sum(students.values())
+    return total / len(students)
+
+students = {
+    "An": 8,
+    "Binh": 7,
+    "Chi": 9
+}
+
+print("Điểm trung bình:", average_score(students))
