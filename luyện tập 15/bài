@@ -1,0 +1,5 @@
+a = input("Nhập a: ")
+b = input("Nhập b: ")
+
+result = f"{a}---{b}"
+print(result)
