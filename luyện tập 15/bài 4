@@ -1,0 +1,15 @@
+d1 = float(input("Nhập điểm môn 1: "))
+d2 = float(input("Nhập điểm môn 2: "))
+d3 = float(input("Nhập điểm môn 3: "))
+
+tb = (d1 + d2 + d3) / 3
+print("Điểm trung bình:", tb)
+
+if tb >= 8:
+    print("Giỏi")
+elif tb >= 6.5:
+    print("Khá")
+elif tb >= 5:
+    print("Trung bình")
+else:
+    print("Yếu")
